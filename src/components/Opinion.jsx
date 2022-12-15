@@ -7,7 +7,7 @@ function Opinion(props) {
       <img
         className="image-opinion"
         src={require(`../images/testimonio-${props.image}.png`)}
-        alt={"Foto de emma"}
+        alt={`Foto de ${props.image}`}
       />
       <div className="container-text-opinion">
         <p className="name-opinion">
@@ -16,8 +16,7 @@ function Opinion(props) {
         <p className="position-opinion">
           {props.position} en <strong>{props.company}</strong>
         </p>
-        <p className="text-opinion">
-          <i>{renderToMarkdown(props.opinion)}</i>
+        <p className="text-opinion" dangerouslySetInnerHTML={{ __html: renderToMarkdown(`*"${props.opinion}"*`) }}>
         </p>
       </div>
     </div>
