@@ -1,7 +1,4 @@
-import "./App.css";
-import Opinion from "./components/Opinion.jsx";
-
-const data = [
+[
   {
     "name": "",
     "country": "Singapur",
@@ -27,30 +24,3 @@ const data = [
     "opinion": "Siempre he tenido problemas para aprender JavaScript. He tomado muchos cursos, **pero el curso de freeCodeCamp fue el que se quedó**. Estudiar JavaScript, así como estructuras de datos y algoritmos en freeCodeCamp me dio las habilidades y la confianza que necesitaba para conseguir el trabajo de mis sueños como ingeniero de software en Spotify."
   }
 ]
-
-export function App() {
-  let opiniones = []
-  data.forEach(item => {
-    opiniones.push(
-      <Opinion
-        name= {item.name}
-        country={item.country}
-        image={item.image}
-        position={item.position}
-        company={item.company}
-        opinion={item.opinion}
-      />
-    )
-  })
-
-  return (
-    <div className="App">
-      <div className="contenedor-principal">
-        <h1>Estas son opiniones</h1>
-        {opiniones}
-      </div>
-    </div>
-  );
-}
-
-export default App;
